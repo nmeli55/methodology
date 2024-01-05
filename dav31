@@ -1,0 +1,30 @@
+//31. დაწერეთ პროგრამა რომელიც დაადგენს შეყვანილი რიცხვი მარტივია თუ არა
+import acm.program.ConsoleProgram;
+public class davalebebi31 extends ConsoleProgram {
+	public void run() {
+		int count = 0;
+		while (true) {
+			int num = readInt("Enter number: ");
+			if (isPrime(num)) {
+				println("prime");
+			} else {
+				println("not prime");
+			}
+		}
+	}
+
+	private boolean isPrime(int num) {
+		int countDivisors = countDivs(num);
+		return countDivisors == 2;
+	}
+
+	private int countDivs(int num) {
+		int count = 0;
+		for (int i = 1; i <= num; i++) {
+			if (num % i == 0) {
+				count++;
+			}
+		}
+		return count;
+	}
+}
