@@ -1,7 +1,7 @@
 import acm.program.ConsoleProgram;
 //15. კონსოლიდან წაიკითხეთ ორი მთელი რიცხვი და დაბეჭდეთ მათი 
 //საშუალო არითმეტიკული.
-public class davalebebi extends ConsoleProgram{
+public class davalebebi15 extends ConsoleProgram{
 	private int number1;
 	private int number2;
 	private int average;
