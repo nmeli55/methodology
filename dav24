@@ -1,0 +1,19 @@
+import acm.program.ConsoleProgram;
+// 24. მომხმარებელს შეყავს მთელი რიცხვი n, პროგრამამ უნდა დაბეჭდოს n ის გამყოფების
+// რაოდენობა
+public class davalebebi24 extends ConsoleProgram{
+	public void run(){
+		int num = readInt("Enter number: ");
+		int countDivisors = countDivisors(num);
+		println(countDivisors);
+	}
+	private int countDivisors(int num) {
+		int count = 0;
+		for(int i = 1; i <= n; i++){
+			if(n % i == 0){
+				count++;
+			}
+		}
+		return count;
+	}
+}
