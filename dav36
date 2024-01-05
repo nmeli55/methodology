@@ -1,0 +1,32 @@
+//36. თქვენი ამოცანაა გააკეთოთ მონეტის აგდების სიმულაციები და დათვალოთ საშუალოდ
+//რამდენჯერ უნდა ავაგდოთ მონეტა რათა 3-ჯერ ზედიზედ ამოვიდეს ბორჯღალო.
+import acm.program.ConsoleProgram;
+import acm.util.RandomGenerator;
+public class davalebebi36 extends ConsoleProgram {
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	public void run() {
+		int sum = 0;
+		for (int i = 0; i < 1000; i++) {
+			int count = threeSimulationCount();
+			sum += count;
+		}
+		println("average is: " + sum / 1000.0);
+	}
+
+	private int threeSimulationCount() {
+		int coin = 0;
+		int count = 0;
+		int countInRow = 0;
+		while (countInRow != 3) {
+			coin = rgen.nextInt(0, 1);
+			if (coin == 1) {
+				countInRow++;
+			} else {
+				countInRow = 0;
+			}
+			count++;
+		}
+		return count;
+	}
+}
