@@ -1,0 +1,38 @@
+
+//22. ჭადრაკის დაფის დახატვა 10x10 ზე
+
+import java.awt.Color;
+
+import acm.graphics.GLine;
+import acm.graphics.GOval;
+import acm.graphics.GPolygon;
+import acm.graphics.GRect;
+import acm.program.*;
+
+public class davalebebi21 extends GraphicsProgram {
+	
+	private void addLine(double x1, double y1, double x2, double y2) {
+		GLine line = new GLine(x1, y1, x2, y2);
+		add(line);
+	}
+		
+	public void run() {
+		addHorizontalLines();
+		addVerticalLines();
+	}
+	
+	private void addHorizontalLines() {
+		double side = (double)getHeight() / 10;
+		for (int i = 1; i < 10; i++) {
+			addLine(0, i * side, getWidth(), i * side);
+		}
+	}
+	
+	private void addVerticalLines() {
+		double side = (double)getWidth() / 10;
+		for (int i = 1; i < 10; i++) {
+			addLine(i * side, 0, i * side, getHeight());
+		}
+	}
+
+}
