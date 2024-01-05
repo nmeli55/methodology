@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33100\viewh20700\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 public void run() \{\
+	String dna = readLine(\'93Enter DNA: \'93);\
+	String max = \'93\'94;\
+	for(int i = 0; i < dna.length(); i ++) \{\
+		for(int j = i +1 ; j < dna.length(); j++)\{\
+			String sub = dna.substring(i, j);\
+			if(isMultiple(dna, sub)\{\
+				if(sub.length() > max.length())\{\
+					max = sub;\
+				\}\
+			\}\
+		\}\
+	\}\
+	println(max);\
+\}\
+aaaactctggaa\
+private boolean isMultiple(String dna, String sub)\{\
+	if(dna.contains(sub))\{\
+		String subsub = dna.substring(indexOf(sub) + 1, dna.length());\
+		if(subsub.contains(sub))\{\
+			return true;\
+		\}\
+	\}\
+\}\
+\
+\
+\
+\
+\
+public void run()\{\
+	String reverse = \'93\'94;\
+	for(int i = text.length(); i > 0 ; i \'97)\{\
+		Sting new  = reverse + text.substring(i);\
+	\}\
+	return new;\
+\}}
