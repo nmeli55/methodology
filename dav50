@@ -1,0 +1,18 @@
+//50. შეყვანილ ტექსტში დათვალეთ სიტვყების რაოდენობა, ტოკენაიზერის საშუალები
+import java.util.StringTokenizer;
+import acm.program.ConsoleProgram;
+
+public class davalebebi50 extends ConsoleProgram{
+	public void run() {
+		String text = readLine("Enter text: ");
+		StringTokenizer tokenizer = new StringTokenizer(text, " ,.!?\t");
+		
+		int count = 0;
+		while(tokenizer.hasMoreTokens()) {
+			tokenizer.nextToken();
+			count++;
+		}
+		println("Count: " + count);
+	}
+
+}
