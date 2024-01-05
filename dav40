@@ -1,0 +1,33 @@
+//40. წინა ამოცანის გაგრძელება, დაამატეთ ვერტიკალური კედლებიდან ასხლეტვა. ანუ ბურთი
+// მოძრაობს მარცხენა კედლიდან მარჯვნივ. როგორც კი მარჯვენა კედელს დაეტაკება იმავე
+// სიჩქარით უნდა გააგრძელოს მოძრაობა მაჯვენა კედლიდან მარცხნივ. როგორც კი მარცხენა
+// კედელს დაეტაკება უნდა გააგრძელოს მარჯვნივ და ა.შ. უსასრულოდ.
+
+import acm.graphics.GOval;
+import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
+
+public class davalebebi40 extends GraphicsProgram {
+	private RandomGenerator rgen = RandomGenerator.getInstance();
+
+	public void run() {
+		GOval ball = new GOval(100, 100);
+		ball.setFilled(true);
+		ball.setLocation(rgen.nextDouble(0, getWidth() - ball.getWidth()), rgen.nextDouble(0, getHeight() - ball.getHeight()));
+		add(ball);
+		double vx = rgen.nextDouble(5, 10);
+		double vy = rgen.nextDouble(5, 10);
+
+		while (true) {
+			pause(100);
+			ball.move(vx, vy);
+			if (ball.getX() <= 0 || ball.getX() + ball.getWidth() >= getWidth()) {
+				vx = -vx;
+			}
+			if(ball.getY() <= 0 || ball.getY() + ball.getHeight() >= getHeight()){
+				vy = -vy;
+			}
+		}
+
+	}
+}
