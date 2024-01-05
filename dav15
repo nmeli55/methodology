@@ -1,0 +1,20 @@
+import acm.program.ConsoleProgram;
+//15. კონსოლიდან წაიკითხეთ ორი მთელი რიცხვი და დაბეჭდეთ მათი 
+//საშუალო არითმეტიკული.
+public class davalebebi extends ConsoleProgram{
+	private int number1;
+	private int number2;
+	private int average;
+	public void run() {
+		number1 = readInt("Enter first Number:");
+		number2 = readInt("Enter second Number:");
+		
+		getAverageNumber();
+		println("this is the average of these two numbers:" + average);
+	}
+
+	private void getAverageNumber() {
+		// this method gets the average of two whole numbers
+		average = (number1* number2)/2;
+	}
+}
