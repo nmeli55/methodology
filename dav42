@@ -1,0 +1,36 @@
+//42. Paint-ის მონაკვეთის ხატვის გაკეთება, ჯერ აჭერ მაუსს, ფიქსირდება ერთი წვერო, მერე
+// მაუსის მოძრაობისას მონაკვეთიც მოძრაობს რადგან მეორე წვერო არაა დაფიქსირებული და
+// კლიკით ფიქსირდება მეორე წვეროც.
+
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.util.ArrayList;
+import acm.graphics.*;
+import acm.program.*;
+import acm.util.RandomGenerator;
+
+public class davalebebi42 extends GraphicsProgram {
+
+    private GLine startLine;
+
+    public void init() {
+        addMouseListeners();
+    }
+
+    public void run() {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        activeLine = new GLine(e.getX(), e.getY(), e.getX(), e.getY());
+        add(startLine);
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        startLine.setEndPoint(e.getX(), e.getY());
+    }
+}
