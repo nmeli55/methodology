@@ -1,6 +1,6 @@
 import acm.program.ConsoleProgram;
 //20. კონსოლიდან წაიკითხეთ n, შემდეგ წაიკითხეთ n ცალი მთელი რიცხვი და დაბეჭდეთ ჯამი
-public class davalebebi extends ConsoleProgram{
+public class davalebebi20 extends ConsoleProgram{
 	public void run() {
 		int count = readInt("Enter the count of numbers: ");
 		int sum = 0;
