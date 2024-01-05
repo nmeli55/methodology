@@ -1,0 +1,24 @@
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.util.ArrayList;
+
+import acm.graphics.*;
+import acm.program.*;
+import acm.util.RandomGenerator;
+
+public class davalebebi43 extends GraphicsProgram {
+
+    private static final int DIAMETER = 100;
+
+    public void init() {
+        addMouseListeners();
+    }
+
+    public void run() {
+        DraggableOval oval = new DraggableOval(DIAMETER, DIAMETER);
+        oval.setFilled(true);
+        add(oval);
+    }
+}
