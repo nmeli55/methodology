@@ -1,0 +1,20 @@
+//26. მომხმარებელს შეჰყავს ორი რიცხვი თქვენმა პროგრამამ უნდა დაბეჭდოს ამ ორი რიცხვის
+//უდიდესი საერთო გამყოფი
+import acm.program.ConsoleProgram;
+public class davalebebi26 extends ConsoleProgram{
+	public void run(){
+		int first = readInt("Enter number: ");
+		int second = readInt("Enter number: ");
+		int small = first;
+		if(second < first){
+			small = second;
+		}
+		while(first > 0){
+			if(first % small == 0 && second % small == 0){
+				println(small);
+				break;
+			}
+			small--;
+		}
+	}	
+}
